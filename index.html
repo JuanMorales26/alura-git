@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="widht=devide-width, initial-scale=1.0">
+    <title>02 HTML-Practica_1_LaunchX_Pastelería_Cliente</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        body {
+            font-family: sans-serif, Helvetica, Arial;
+        }
+        /* Estilo de header */
+        header {
+            background-color: rgb(109, 17, 17);
+            padding: 10px;
+            text-align: center;
+            font-size: 35px;
+            color: rgb(0, 0, 0);
+        }
+        /* Crear 2 columnas con la misma posición en la fila
+        nav {
+            float: none;
+            width: 30%;
+            height: 300px;
+            /* only for demonstration, should be removed */
+            /*background: #ccc;
+            padding: 20px;
+        }
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+        }*/
+        article {
+            float: none;
+            text-align: center;
+            padding: 0;
+            width: 100%;
+            background-color: rgb(173, 106, 106);
+            height: 100%;
+        }
+        /* Clear floats after the columns */
+        section::after {
+            content: "";
+            text-align: center;
+            display: table;
+            clear: both;
+        }
+
+        /* Estilo de footer */
+        footer {
+            background-color: rgb(255, 255, 255);
+            padding: 0;
+            text-align: center;
+            color: rgb(0, 0, 0);
+        }
+
+        /* Responsive layout */
+        @media (max-width: 600px) {
+            nav,
+            article {
+                width: 100%;
+                height: auto;
+            }
+        }
+    </style>
+
+</head>
+<body>
+    <header>
+        <h1>Pastelería DOOM Cake</h1>
+        <img src="https://i.pinimg.com/564x/80/74/5a/80745a8163a34ece1045257160f07a87.jpg" alt="Logo Doom Cake" width="250px" height="300px">
+        <h2>El dulce sabor del infierno</h2>
+
+    </header>
+<section>    
+<article>
+    <br>
+    <p>Bienvenidos a la única pastelería con presencia en el basto y terrorifíco reino del infierno. 
+        <br>Nuestro jefe y fundador, el Doom Slayer, abrio sucursales en todo el infierno.
+        <br>Hizo uso de todos los desechos restantes de los demonios aniquilados a su paso para hornear y decorar suculentos ejemplares de repostería
+        <br> Conozca un poco más del fundador en:
+        <br><img src="https://i.imgur.com/fkgAesk.jpeg" alt="Foto del Jefe" width="300px" height="350px">
+        <br> <a href="https://doom.fandom.com/es/wiki/Doom_Slayer" target="blank">              Doom Slayer</a>
+        <br> A continuacion le mostramos nuestros sabores
+    </p>
+    <hr>
+    <h3>Sabores</h3>
+        <dl>
+            <dt><b>Diablillo Straberry: $5 USD</b></dl>
+                <dd>-> Sangre de diablillo caramelizada sabor fresa</dd><p></p>
+            <dt><b>Vanilla Maykr: $7 USD</b></dl><p></p>
+                <dd>-> Fluido cerebral hervido de Maykr sabor vainilla</dd><p></p>
+            <dt><b>Mancubus Juicy: $10 USD</b></dl><p></p>
+                <dd>-> Entrañas de Mancubus sabor pistache</dd><p></p>
+            <dt><b>Choco-Sin: $15 USD</b></dl><p></p>
+                <dd>-> Chocolizante bilis directa del Icono del Pecado</dd>
+        </dl>                    
+    <hr>
+    <h3>Adornos</h3>
+        <dl>
+            <dt><b>Crunchy Pinky: $8 USD</b></dl>
+                <dd>-> Crujiente cubierta de Pinky moscado</dd><p></p>
+            <dt><b>Aracno Eyes: $14 USD</b></dl><p></p>
+                <dd>-> Jugosos Ojos frescos de Aracnotrón bañados en su sangre caramelizada</dd><p></p>
+            <dt><b>Molted-ChocoBaron: $25 USD</b></dl><p></p>
+                <dd>-> Deliciosa y fina capa de chocolatosos restos de la armadura fundida del Baron del Infierno</dd><p></p>
+            <dt><b>Khan Bridge Maykr: $15 USD</b></dl><p></p>
+                <dd>-> Elegante betún de bodas extraido del exquisito cuerpo del Khan Maykr</dd>
+        </dl>
+    <hr>    
+</article>
+</section>   
+<footer>
+    <h3>Haga Su pedido!!</h3>
+
+<form name="Form_Orden1" method="post" action="/send.php">
+    <label for="Customer_Name1">Pedido a nombre de</label>
+    <br>
+        <input type="text" id="Customer_Name1" name="Customer_Name1" value="" placeholder="Introduzca su nombre">
+        <input type="text" id="Customer_Lastname1" name="Customer_Lastname1" value="" placeholder="Apellidos">
+    <br>
+    <label for="Customer_Phone1">Ingrese su número de telefono</label>
+    <br>
+        <input type="tel" id="Customer_Phone1" name="Customer_Phone1" maxlength="10">
+    <br>
+    <label for="Customer_Email1">Ingrese su email</label>
+    <br>
+    <input type="email" id="Customer_Email1" name="Customer_Email1">
+    <br>
+    <label for="Customer_Order_date1">Ingrese fecha de recolección de la orden</label>
+    <br>
+    <input type="date" id="Customer_Order_date1" name="Customer_Order_date1" min="">
+    <br>
+    <p>Elija los sabores que quiera!, completamente combinables :D</p>
+    <input type="radio" id="Diablilo_Straberry" name="Flavors_choose1">
+    <label for="Diablilo_Staberry">Diablilo Straberry</label>
+    <br>
+    <input type="radio" id="Vanilla_Maykr" name="Flavors_choose2">
+    <label for="Vanilla_Maykr">Vanilla Maykr</label>
+    <br>
+    <input type="radio" id="Mancubus_Juicy" name="Flavors_choose3">
+    <label for="Mancubus_Juicy">Mancubus Juicy</label>
+    <br>
+    <input type="radio" id="Choco_Sin" name="Flavors_choose4">
+    <label for="Choco-Sin">Choco-Sin</label>
+    <br>
+    <p>Elija los adornos que quiera!, completamente combinables :D</p>
+    <input type="radio" id="Crunchy_Pinky" name="Cover_choose1">
+    <label for="Crunchy_Pinky">Crunchy Pinky</label>
+    <br>
+    <input type="radio" id="Aracno_Eyes" name="Cover_choose2">
+    <label for="Aracno_Eyes">Aracno Eyes</label>
+    <br>
+    <input type="radio" id="Molted_ChocoBaron" name="Cover_choose3">
+    <label for="Molted_ChocoBaron">Molted-ChocoBaron</label>
+    <br>
+    <input type="radio" id="Khan_Bridge_Maykr" name="Cover_choose4">
+    <label for="Khan_Bridge_Maykr">Khan Bridge Maykr</label>
+    <br><br>
+    <label for="Cake_desc1">Describa los detalles de su pastel</label>
+    <br>
+    <textarea name="Cake_desc1" id="Cake_desc1" cols="70" rows="10" placeholder="Quiero que mi pastel luzca como..."></textarea>
+    <br><br>
+    <input type="reset">
+    <!--<input type="submit">-->
+    <a href="./02 HTML-Practica_1_LaunchX_Pastelería_Pastelero.html" >
+        <input type="button" name="button1" id="button1" value="Enviar Orden" onclick="alert('Orden enviada con exito')">
+    </a>
+</form>
+
+    <br><br>
+    <p><b>Contacto:</b> Emiliano Zapata 680-A, Int.:C, Colonia Pacifico, Guadalajara, Jalisco. México. Tel.: 3321841751. Horarios de atención: Lunes a Domingo de 9 am a 6 pm.</p>
+    <p><b>Pastelería Doom Cake</b> El dulce sabor del infierno</p>
+</footer>
+    </body>
+</html>
